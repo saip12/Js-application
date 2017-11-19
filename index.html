@@ -1,0 +1,198 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Landing Page - Front-End Developer Test</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+    <div class="container-fluid">
+       <h1 class="jumbotron">Landing Page Form - Front-End Developer Test</h1>
+
+       <div class="wine-already-ordered alert alert-success" style="display: none;">
+            <h2>Form has already been submitted and filled out</h2>
+       </div>
+
+        <form name="product-form" action="" method="post" class="form-horizontal" id="wine-order-form">
+
+            <div id="shipping-address-container"> 
+                <div class="section-header page-header"> 
+                    <h2>Shipping Information</h2> 
+                </div>                                               
+                <div class="checkout" id="shipping-address"> 
+                    <div class="form-group" id="shipping-email">
+                        <label class="control-label col-sm-2" for="email">Email Address:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="email-address" placeholder="Enter email" name="email" required>
+                        </div>
+                        <div class="col-sm-4">
+                            <small id="emailError" class="text-danger" style="display: none;">*Email Entered is not Valid</small>
+                        </div>
+                    </div>
+                    <div class="form-group" id="confirm-shipping-email">
+                        <label class="control-label col-sm-2" for="confirm-email">Confirm Email Address:</label>
+                        <div class="col-sm-4">
+                            <input type="email" class="form-control" id="email-address-confirm" placeholder="Confirm email" name="email" onpaste="return false;" required>
+                        </div>
+                        <div class="col-sm-4">
+                            <small id="confirmemailError" class="text-danger" style="display: none;">*Email Entered are not matching</small>
+                        </div>
+                    </div>
+                    <div class="form-group" id="shipping-fname">
+                        <label class="control-label col-sm-2" for="first-name">First Name:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="first-name" placeholder="Enter First Name" name="first-name" maxlength="15" required>
+                        </div>
+                    </div>
+                    <div class="form-group" id="shipping-lname">
+                        <label class="control-label col-sm-2" for="last-name">Last Name:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="last-name" placeholder="Enter Last Name" name="last-name" maxlength="19" required>
+                        </div>
+                    </div>
+                    <div class="form-group" id="shipping-addr1">
+                        <label class="control-label col-sm-2" for="address-1">Address 1:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="address-1" placeholder="Enter Address 1" name="address-1" maxlength="35" required>
+                        </div>
+                    </div>
+                    <div class="form-group" id="shipping-addr2">
+                        <label class="control-label col-sm-2" for="address-2">Address 2:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="address-2" placeholder="Enter Address 2" name="address-2" maxlength="35">
+                        </div>
+                    </div>
+                    <div class="form-group" id="shipping-city">
+                        <label class="control-label col-sm-2" for="city">City:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="city" placeholder="Enter City" name="city" required>
+                        </div>
+                    </div>
+                    <div class="form-group" id="shipping-state">
+                        <label class="control-label col-sm-2" for="address-1">State:</label>
+                        <div class="col-sm-4">
+                        <select name="state" class="form-control" required id="stateValue">
+                        <option value="AL">AL</option>
+                        <option value="AK">AK</option>
+                        <option value="AZ">AZ</option>
+                        <option value="AR">AR</option>
+                        <option value="CA">CA</option>
+                        <option value="CO">CO</option>
+                        <option value="CT">CT</option>
+                        <option value="DE">DE</option>
+                        <option value="DC">DC</option>
+                        <option value="FL">FL</option>
+                        <option value="GA">GA</option>
+                        <option value="HI">HI</option>
+                        <option value="ID">ID</option>
+                        <option value="IL">IL</option>
+                        <option value="IN">IN</option>
+                        <option value="IA">IA</option>
+                        <option value="KS">KS</option>
+                        <option value="KY">KY</option>
+                        <option value="LA">LA</option>
+                        <option value="ME">ME</option>
+                        <option value="MD">MD</option>
+                        <option value="MA">MA</option>
+                        <option value="MI">MI</option>
+                        <option value="MN">MN</option>
+                        <option value="MS">MS</option>
+                        <option value="MO">MO</option>
+                        <option value="MT">MT</option>
+                        <option value="NE">NE</option>
+                        <option value="NV">NV</option>
+                        <option value="NH">NH</option>
+                        <option value="NJ">NJ</option>
+                        <option value="NM">NM</option>
+                        <option value="NY">NY</option>
+                        <option value="NC">NC</option>
+                        <option value="ND">ND</option>
+                        <option value="OH">OH</option>
+                        <option value="OK">OK</option>
+                        <option value="OR">OR</option>
+                        <option value="PA">PA</option>
+                        <option value="RI">RI</option>
+                        <option value="SC">SC</option>
+                        <option value="SD">SD</option>
+                        <option value="TN">TN</option>
+                        <option value="TX">TX</option>
+                        <option value="UT">UT</option>
+                        <option value="VT">VT</option>
+                        <option value="VA">VA</option>
+                        <option value="WA">WA</option>
+                        <option value="WV">WV</option>
+                        <option value="WI">WI</option>
+                        <option value="WY">WY</option>
+                        </select> 
+                           
+                        </div>
+                        <div class="col-sm-4">
+                            <small id="confirmStateError" class="text-danger" style="display: none;">*We are unable to ship Wine to those states</small>
+                        </div>
+                    </div>
+                     <div class="form-group" id="shipping-zip">
+                        <label class="control-label col-sm-2" for="zip">Zip:</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="zip" placeholder="Enter Zip" name="zip" maxlength="5" onkeypress="return isNumber(event)" required>
+                        </div>
+                    </div>
+                     <div class="form-group" id="shipping-phone">
+                        <label class="control-label col-sm-2" for="phone">Phone:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="phone" placeholder="Enter Phone" name="phone" maxlength="10" onkeypress="return isNumber(event)" required>
+                        </div>
+                         <div class="col-sm-4">
+                            <small id="phoneError" class="text-danger" style="display: none;">*Phone Number Entered is not Valid</small>
+                        </div>
+                    </div>
+                     <div class="form-group" id="shipping-toggle">
+                        <label class="control-label col-sm-2" for="addressorComm">Is this address?</label>
+                        <div class="col-sm-6">
+                        <input id="residential"  value="Residential" type="radio" checked="" name="addressorComm">
+                        <span> Residential </span> 
+                        <input id="commercial"  value="Commercial" type="radio" name="addressorComm">
+                        <span> Commercial </span> 
+                        </div>
+                    </div>
+                     <div class="form-group" id="shipping-company">
+                        <label class="control-label col-sm-2" for="company">Company Name:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="company" placeholder="Enter Company" name="company">
+                        </div>
+                    </div>
+                     <div class="form-group">        
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" class="btn btn-primary" id="submit-form">Submit Form</button>
+                             </div>
+                    </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script type="text/javascript" src="js/vendor/jquery.cookie.js"></script>
+        <script type="text/javascript" src="js/vendor/bootstrap.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+		
+       
+    </body>
+</html>
